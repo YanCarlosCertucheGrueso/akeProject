@@ -6,15 +6,17 @@ function Fibo() {
     const [error, setError] = useState(false)
 
     function fiboClick() {
-        console.log(param);
+        let result = []
+        console.log(param, result);
     }
     function fiboChange(e){
+        e.preventDefault()
         setParam(e.target.value)
     }
 
     return (
       <div>
-        <h4>Fibbonacci</h4>
+        <h4>Fibonacci</h4>
         <form>
         <input type="text" onChange={fiboChange}></input>
         <button type="submit" onClick={fiboClick}>Ejecutar</button>

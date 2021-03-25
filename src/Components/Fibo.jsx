@@ -1,13 +1,20 @@
 import { useState } from "react";
 
 function Fibo() {
-    const [param, setParam] = useState(0)
+    const [param, setParam] = useState('0')
     const [result, setResult] =useState([])
     const [error, setError] = useState(false)
+    const regex = new RegExp("^([0-9])*$")
 
     function fiboClick() {
-        let result = []
-        console.log(param, result);
+        console.log(param)
+        if(regex.test(param)){
+            console.log("paso")
+            let result = []
+            console.log(param, result);
+        }else{
+            setError(true)
+        }
     }
     function fiboChange(e){
         e.preventDefault()

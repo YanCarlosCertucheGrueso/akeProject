@@ -4,7 +4,7 @@ function Fibo() {
     const [param, setParam] = useState('0')
     const [result, setResult] =useState([])
     const [error, setError] = useState(false)
-    const regex = new RegExp("^([1-9])*$")
+    const regex = new RegExp("^[1-9][0-9]*$")
 
     function Fibonacci (limit){
         var a = 0
@@ -57,5 +57,4 @@ function Fibo() {
       </div>
     );
 }
-  
 export default Fibo;

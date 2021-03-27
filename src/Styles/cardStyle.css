@@ -1,0 +1,32 @@
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 20px;
+    width: 600px; 
+    padding: 20px;
+    height: 400px;
+    border-style: solid;
+    border-width: 3px;
+    font-family: "Century Gothic"
+}
+
+.header{
+    height: 40px;
+    font-weight: bold;
+}
+
+.img{
+    width: 40%;
+    float: left;
+    height: 260px;
+}
+
+.right{
+    width: 55%;
+    float: right;
+    height: 360px;
+}
+.overview{
+    height: 220px;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}

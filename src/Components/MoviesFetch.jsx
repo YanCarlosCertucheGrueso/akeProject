@@ -11,9 +11,9 @@ function MoviesFetch(url){
         console.log("la url", url)
         fetch(url).then( res => res.json())
         .then( res => {
-                console.log("las pelis" , res.result)
+                console.log("las pelis" , res.results)
                 console.log("los generos", res.genres)
-                setState(res);
+                setState(res.results);
                 setLoading(false)})
         .catch(err => {
             setHasError(true)

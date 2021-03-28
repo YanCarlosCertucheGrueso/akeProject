@@ -6,7 +6,7 @@ function Card(props){
 
             <div className="header">
                 <div className="title">
-                    <label>{props.Title || "Title"}  {props.Year || "(año)"}</label>
+                    <label>{props.Title || "Title"}  {"("+props.Year+")" || "(año)"}</label>
                 </div>
             </div>
 
@@ -25,7 +25,7 @@ function Card(props){
                     </div>
                     <div>
                         <label className="label">Calificación: </label>
-                        <label>{props.Vote || "8.5"}</label>
+                        <label>{props.Vote +" " || "8.5"}</label>
                         <img className="star" alt ="icon" src='../Icons/Star3.png'></img>
                     </div>
                     <div>

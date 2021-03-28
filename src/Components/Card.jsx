@@ -1,5 +1,5 @@
 import '../Styles/cardStyle.css';
-
+import '../Icons/Star3.png'
 function Card(){
     return(
         <div className="card">
@@ -25,7 +25,7 @@ function Card(){
                     </div>
                     <div>
                         <label className="label">Calificación: </label>
-                        <i>calificación</i>
+                        <img className="star" alt ="icon" src='../Icons/Star3.png'></img>
                     </div>
                     <div>
                         <label className="label">Genero: </label>

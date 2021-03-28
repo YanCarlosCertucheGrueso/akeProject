@@ -25,7 +25,7 @@ function Card(){
                     </div>
                     <div>
                         <label className="label">Calificación: </label>
-                        <label>calificación</label>
+                        <i>calificación</i>
                     </div>
                     <div>
                         <label className="label">Genero: </label>

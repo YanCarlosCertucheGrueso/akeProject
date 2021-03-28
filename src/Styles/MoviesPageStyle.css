@@ -4,3 +4,13 @@
     position:absolute;
     left: 50%;
 }
+
+.toolsContainer {
+    margin-bottom: 1%;
+}
+
+.input{
+    border-radius: 10px;
+    width: 20%;
+    height: 30px;
+}

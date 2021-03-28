@@ -14,8 +14,9 @@ function MoviesPage () {
 
     return(
         <div>
-            <div>
-                <input type="text"></input>
+            <div>Películas</div>
+            <div className="toolsContainer">
+                <input className="input" type="text"></input>
                 <img src={Vector} alt="icon"></img>
                 <div className="vertical"></div>
                 <img src={FilterIcon} alt="icon"></img>

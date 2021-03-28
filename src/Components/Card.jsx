@@ -18,22 +18,22 @@ function Card(){
                 <div className="overview">
                     Un joven sin ilusiones lucha contra su insomnio, consecuencia quizás de su hastío por su gris y rutinaria vida. En un viaje en avión conoce a Tyler Durden, un carismático vendedor de jabón que sostiene una filosofía muy particular: el perfeccionismo es cosa de gentes débiles; en cambio, la autodestrucción es lo único que hace que realmente la vida merezca la pena. Ambos deciden entonces formar un club secreto de lucha donde descargar sus frustaciones y su ira que tendrá un éxito arrollador.
                 </div>
-                <div>
+                <div className="description">
                     <div>
-                        <label>Titulo</label>
-                        <p>titulo pelicula</p>
+                        <label className="label">Titulo: </label>
+                        <label>titulo pelicula</label>
                     </div>
                     <div>
-                        <label>Calificación</label>
-                        <p>calificación</p>
+                        <label className="label">Calificación: </label>
+                        <label>calificación</label>
                     </div>
                     <div>
-                        <label>Genero</label>
-                        <p>los generos</p>
+                        <label className="label">Genero: </label>
+                        <label>los generos</label>
                     </div>
                     <div>
-                        <label>Fecha de realización</label>
-                        <p>fecha</p>
+                        <label className="label">Fecha de realización: </label>
+                        <label>fecha</label>
                     </div>
                 </div>
             </div>

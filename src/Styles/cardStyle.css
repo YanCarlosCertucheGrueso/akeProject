@@ -29,4 +29,10 @@
     height: 220px;
     overflow : hidden;
     text-overflow : ellipsis;
+    margin-bottom: 15%;
 }
+
+.label{
+    font-weight: bold;
+}
+

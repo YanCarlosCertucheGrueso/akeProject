@@ -1,13 +1,14 @@
 import '../src/Styles/appStyle.css';
 import Fibo from './Components/Fibo';
 import Mult from './Components/Mult';
-import Card from './Components/Card';
+//import Card from './Components/Card';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+import MoviesPage from './Components/MoviesPage';
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
         </Route>
         <Route path="/puntoTres">
           <div className="containerApp">
-            <Card></Card>
+            <MoviesPage></MoviesPage>
           </div>
         </Route>
       </Switch>

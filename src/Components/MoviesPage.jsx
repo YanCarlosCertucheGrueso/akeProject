@@ -4,13 +4,24 @@ import Vector from './Icons/Vector.png';
 import FilterIcon from './Icons/FilterIcon.png';
 import ArrowIcon from './Icons/ArrowIcon.png';
 import '../Styles/MoviesPageStyle.css'
+import { useState } from 'react';
 
 function MoviesPage () {
     const server = "http://localhost:3525";
     const link = "https://image.tmdb.org/t/p/w500";
     const token = "123456789";
     const endPoint = "/movies/" + token;
+    /*const fetchReturn = MoviesFetch(server+endPoint)
+    const [respuesta, setRespuesta]=useState([])
+    const [cargando, setCargando]=useState(false)
+    const [hasError, setHasError]=useState(false)
+    const [generos, setGeneros]=useState([])
+    setRespuesta(fetchReturn[0])
+    setCargando(fetchReturn[1])
+    setHasError(fetchReturn[2])
+    setGeneros(fetchReturn[4])*/
     const [respuesta, cargando, hasError, generos] = MoviesFetch(server+endPoint)
+    const [paramMovie, setParamMovie] = useState("")
 
     function mapGenres(arr){
         var genreNames = []
@@ -26,13 +37,26 @@ function MoviesPage () {
         return r
     }
 
+    function searchMovie(e){
+        e.preventDefault()
+        console.log(paramMovie)
+        //var resultSearch = respuesta.filter( x => x.title === paramMovie)
+        //setRespuesta(resultSearch)
+        
+    }
+    function theMovie(e){
+        e.preventDefault()
+        setParamMovie(e.target.value)
+
+    }
+
     return(
         <div>
             <div><h4>Películas</h4></div>
             <div className="toolsContainer">
                 <label className="label1">
-                <input className="input" type="text"></input>
-                <button className="vectorIcon" ><img  src={Vector} alt="icon"></img></button>
+                <input className="input" type="text" onChange={theMovie}></input>
+                <button className="vectorIcon" onClick={searchMovie}><img  src={Vector} alt="icon"></img></button>
                 </label>
                 <div className="vertical"></div>
                 <button className="filterIcon"><img src={FilterIcon} alt="icon"></img></button>
@@ -45,7 +69,7 @@ function MoviesPage () {
             {cargando? 
                 <div> Cargando ... </div>: 
                 (hasError? <div> Se produjo un error. </div>:
-                (respuesta.map (data => <Card Title={data.title}
+                (respuesta.map (data => <Card key={data.id} Title={data.title}
                 Year={data.release_date.slice(0,4)}
                 ImgPath={link + data.poster_path}
                 Description={data.overview}

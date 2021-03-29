@@ -1,12 +1,12 @@
+.toolsContainer {
+    margin-bottom: 1%;
+}
+
 .vertical {
     border-left: 4px solid black;
     height: 40px;
     position:absolute;
-    left: 50%;
-}
-
-.toolsContainer {
-    margin-bottom: 1%;
+    float:left;
 }
 
 .input{

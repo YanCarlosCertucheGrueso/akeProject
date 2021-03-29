@@ -10,11 +10,27 @@ function MoviesPage () {
     const link = "https://image.tmdb.org/t/p/w500";
     const token = "123456789";
     const endPoint = "/movies/" + token;
-    const [respuesta, cargando, hasError] = MoviesFetch(server+endPoint)
+    const [respuesta, cargando, hasError, generos] = MoviesFetch(server+endPoint)
+
+    function mapGenres(arr){
+        console.log("vine a fucioón")
+        var genreNames = []
+        var r = ""
+        for(var j=0 ; j<arr.length; j++){
+            for(var i in generos){
+                if(arr[j] === generos[i].id){
+                    genreNames.push(generos[i].name)
+                }
+            }
+        }
+        r = genreNames.join(', ')
+        console.log("retorno función", r)
+        return r
+    }
 
     return(
         <div>
-            <div>Películas</div>
+            <div><h4>Películas</h4></div>
             <div className="toolsContainer">
                 <input className="input" type="text"></input>
                 <img src={Vector} alt="icon"></img>
@@ -33,9 +49,8 @@ function MoviesPage () {
                 Year={data.release_date.slice(0,4)}
                 ImgPath={link + data.poster_path}
                 Description={data.overview}
-                Title={data.title}
                 Vote={data.vote_average}
-                Genre={data.genre_ids.toString()}
+                Genre={mapGenres(data.genre_ids)}
                 Date={data.release_date}
                 />)))} 
             </div>

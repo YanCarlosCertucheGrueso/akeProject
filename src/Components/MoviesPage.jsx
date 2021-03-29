@@ -30,13 +30,15 @@ function MoviesPage () {
         <div>
             <div><h4>Películas</h4></div>
             <div className="toolsContainer">
+                <label className="label1">
                 <input className="input" type="text"></input>
-                <button><img  src={Vector} alt="icon"></img></button>
+                <button className="vectorIcon" ><img  src={Vector} alt="icon"></img></button>
+                </label>
                 <div className="vertical"></div>
-                <img className="filterIcon"src={FilterIcon} alt="icon"></img>
+                <button className="filterIcon"><img src={FilterIcon} alt="icon"></img></button>
                 <div className="vertical2"></div>
-                <label className="label">Ordenar </label>
-                <img className="arrowIcon" src={ArrowIcon} alt="icon"></img> 
+                <label className="label2">Ordenar </label>
+                <button className="arrowIcon" ><img src={ArrowIcon} alt="icon"></img></button> 
             </div>
 
             <div>

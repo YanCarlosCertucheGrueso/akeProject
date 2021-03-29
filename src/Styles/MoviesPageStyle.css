@@ -1,35 +1,71 @@
 .toolsContainer {
     margin-bottom: 1%;
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
 }
 
 .vertical {
-    border-left: 4px solid black;
+    border-left: 1px solid black;
     height: 40px;
     /*position:absolute;*/
     float:left;
+    position: absolute;
+    left: 375px;
 }
 .vertical2 {
-    border-left: 4px solid black;
+    border-left: 1px solid black;
     height: 40px;
     /*position:absolute;*/
     float:right;
+    margin-left: 0.6%;
+    position: absolute;
+    left: 415px;
+    
 }
 
-.input{
+.input[type="text"]{
     border-radius: 10px;
-    width: 20%;
-    height: 30px;
+    width: 140%;
+    height: 40px;
+    padding: 0 20px;
 }
 
 .filterIcon{
-    margin-left: 1%;
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 385px;
 }
 
-.label{
+.label2{
     margin-left: 1%;
+    position: absolute;
+    left: 420px;
+}
+.label1{
+    position: relative;
 }
 
 .arrowIcon{
-    margin-left: 0.5%;
+    background-color: Transparent;
+    border: none;
     transform: rotate(90deg);
+    cursor: pointer;
+    position: absolute;
+    left: 510px;
+}
+
+.vectorIcon{    
+    position: absolute; 
+    top:5;
+    bottom: 0;
+    right: 0;
+    left: 300px;
+    background-color: Transparent;
+    border: none;   
+    padding: 0 0px;
+    height: 40px;
+    cursor: pointer;
 }

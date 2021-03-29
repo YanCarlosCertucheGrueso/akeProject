@@ -5,12 +5,31 @@
 .vertical {
     border-left: 4px solid black;
     height: 40px;
-    position:absolute;
+    /*position:absolute;*/
     float:left;
+}
+.vertical2 {
+    border-left: 4px solid black;
+    height: 40px;
+    /*position:absolute;*/
+    float:right;
 }
 
 .input{
     border-radius: 10px;
     width: 20%;
     height: 30px;
+}
+
+.filterIcon{
+    margin-left: 1%;
+}
+
+.label{
+    margin-left: 1%;
+}
+
+.arrowIcon{
+    margin-left: 0.5%;
+    transform: rotate(90deg);
 }

@@ -13,7 +13,6 @@ function MoviesPage () {
     const [respuesta, cargando, hasError, generos] = MoviesFetch(server+endPoint)
 
     function mapGenres(arr){
-        console.log("vine a fucioón")
         var genreNames = []
         var r = ""
         for(var j=0 ; j<arr.length; j++){
@@ -24,7 +23,6 @@ function MoviesPage () {
             }
         }
         r = genreNames.join(', ')
-        console.log("retorno función", r)
         return r
     }
 
@@ -33,12 +31,12 @@ function MoviesPage () {
             <div><h4>Películas</h4></div>
             <div className="toolsContainer">
                 <input className="input" type="text"></input>
-                <img src={Vector} alt="icon"></img>
+                <button><img  src={Vector} alt="icon"></img></button>
                 <div className="vertical"></div>
-                <img src={FilterIcon} alt="icon"></img>
-                <div className="vertical"></div>
-                <label>Ordenar </label>
-                <img src={ArrowIcon} alt="icon"></img> 
+                <img className="filterIcon"src={FilterIcon} alt="icon"></img>
+                <div className="vertical2"></div>
+                <label className="label">Ordenar </label>
+                <img className="arrowIcon" src={ArrowIcon} alt="icon"></img> 
             </div>
 
             <div>

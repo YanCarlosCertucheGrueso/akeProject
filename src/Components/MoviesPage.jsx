@@ -21,6 +21,7 @@ function MoviesPage () {
     setCargando(fetchReturn[1])
     setHasError(fetchReturn[2])
     setGeneros(fetchReturn[4])*/
+
     const [respuesta, cargando, hasError, generos] = useFetch(server+endPoint)
     const [paramMovie, setParamMovie] = useState("")
 
@@ -78,13 +79,40 @@ function MoviesPage () {
                             <label className="label-check-box">  {genero.name}</label>
                             </div> )))}
                     </div>
-
                 </div>
+
                 <div className="vertical2"></div>
+
                 <label className="label2">Ordenar </label>
-                <button className="arrowIcon" >
-                    <img src={ArrowIcon} alt="icon">
-                </img></button> 
+                <div className="dropdown-arrow">
+                    <button className="arrowIcon" >
+                        <img src={ArrowIcon} alt="icon"></img>
+                    </button> 
+                    <div className="dropdown-content-arrow">
+                        <div>
+                            <div>
+                                <label className="label-dropdown-arrow">Fecha</label>
+                            </div>
+                            <div>
+                                <button className="button-dropdown-arrow">Nuevas - Antiguas</button>
+                            </div>
+                            <div>
+                                <button className="button-dropdown-arrow">Antiguas - Nueva</button>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                            <label className="label-dropdown-arrow">Calificación</label>
+                            </div>
+                            <div>
+                                <button className="button-dropdown-arrow">0 - 10 puntos</button>
+                            </div>
+                            <div>
+                                <button className="button-dropdown-arrow">10 - 0 puntos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div>

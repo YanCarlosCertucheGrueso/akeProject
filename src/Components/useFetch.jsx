@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-function MoviesFetch(url){
+function useFetch(url){
     const [Loadign, setLoading] = useState(false);
     const [State, setState]= useState([]);
     const [HasError, setHasError]= useState(false);
@@ -20,9 +20,9 @@ function MoviesFetch(url){
         .catch(err => {
             setHasError(true)
             setLoading(false)})
-    },[url]);
+    },[]);
 
     return [State, Loadign, HasError, Genre]
 };
-export default MoviesFetch;
+export default useFetch;
     

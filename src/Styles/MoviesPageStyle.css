@@ -37,12 +37,15 @@
     cursor: pointer;
     position: absolute;
     left: 385px;
+    top : 220px;
+    
 }
 
 .label2{
     margin-left: 1%;
     position: absolute;
     left: 420px;
+    font-family: "Century Gothic";
 }
 .label1{
     position: relative;
@@ -69,3 +72,34 @@
     height: 40px;
     cursor: pointer;
 }
+/*-----------------------start dropdown-----------------------------------------*/
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    height: 300px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .options{
+    font-family: "Century Gothic";
+  }
+  .input-check-box{
+      margin-top: 25px;
+      transform: scale(1.5);
+  }
+  .label-check-box{
+    size: 20px;    
+  }
+  .label-title-dropdown{
+    font-family: "Century Gothic";
+  }

@@ -1,5 +1,6 @@
 import '../Styles/cardStyle.css';
 import starIcon from './Icons/Star5.png';
+import starIcon3 from './Icons/Star3.png';
 function Card(props){
     return(
         <div className="card">
@@ -26,10 +27,10 @@ function Card(props){
                     <div>
                         <label className="label">Calificación: </label>
                         <label>{props.Vote +" " || "8.5"}</label>
-                        <img className="star" alt ="icon" src={starIcon}></img>
-                        <img className="star" alt ="icon" src={starIcon}></img>
-                        <img className="star" alt ="icon" src={starIcon}></img>
-                        <img className="star" alt ="icon" src={starIcon}></img>
+                        <img className="star" alt ="icon" src={starIcon3}></img>
+                        <img className="star" alt ="icon" src={starIcon3}></img>
+                        <img className="star" alt ="icon" src={starIcon3}></img>
+                        <img className="star" alt ="icon" src={starIcon3}></img>
                         <img className="star" alt ="icon" src={starIcon}></img>
                     </div>
                     <div>

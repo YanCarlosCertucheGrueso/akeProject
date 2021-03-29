@@ -85,7 +85,7 @@
     height: 300px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    top:32%;
+    top:43%;
   }
   
   .dropdown:hover .dropdown-content {
@@ -118,7 +118,7 @@
     height: 200px;
     width: 150px;
     left: 25%;
-    top: 32%
+    top: 43%
   }
   
   .dropdown-arrow:hover .dropdown-content-arrow {

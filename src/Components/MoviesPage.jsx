@@ -11,6 +11,8 @@ function MoviesPage () {
     const link = "https://image.tmdb.org/t/p/w500";
     const token = "123456789";
     const endPoint = "/movies/" + token;
+    const [genreSelected, setGenreSelected]=useState([])
+    const [idSelected, setIdSelected] =useState()
     
     /*const [respuesta, setRespuesta]=useState([])
     const [cargando, setCargando]=useState(false)
@@ -48,8 +50,28 @@ function MoviesPage () {
     }
     function theMovie(e){
         e.preventDefault()
-        setParamMovie(e.target.value)
+        setParamMovie(e.target.checked)
 
+    }
+
+    function checkOnChange(e){
+        e.preventDefault()
+        setIdSelected(e.target.id.toString())
+        console.log(e.target.id)
+        console.log(e.target.defaultValue)
+        if(genreSelected.includes(idSelected)){
+            var i = genreSelected.indexOf(idSelected)
+            if( i !== -1){
+                var result = genreSelected.splice(i,1)
+                setGenreSelected(result)
+                console.log("se ha eliminado", genreSelected)
+            }
+        }else{
+            genreSelected.push(idSelected)
+            setGenreSelected(genreSelected)
+            console.log("se ha añadido", genreSelected)
+        }
+        console.log("final al ejecutar", genreSelected)
     }
 
     return(
@@ -75,7 +97,10 @@ function MoviesPage () {
                         (hasError? <div> Se produjo un error.</div>:
                         (generos.map (genero =>
                             <div className="options" key={genero.id}> 
-                            <input className="input-check-box" type="checkbox" id={genero.id}></input>
+                            <input className="input-check-box" type="checkbox" 
+                                id={genero.id} 
+                                defaultValue={true}
+                                onChange={checkOnChange}></input>
                             <label className="label-check-box">  {genero.name}</label>
                             </div> )))}
                     </div>
